@@ -35,7 +35,7 @@ public class App extends Application {
 
         Rectangle rectangle = new Rectangle(0, startY, 50, endY); // x, y, width, height
 
-        // Code for creating a colored rectangle
+        // Code for coloring rectangle
         rectangle.setFill(Color.LIGHTBLUE);       // Interior fill color
         rectangle.setStroke(Color.DARKBLUE);      // Border color
         rectangle.setStrokeWidth(3);              // Border width in pixels
