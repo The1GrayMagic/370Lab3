@@ -30,7 +30,7 @@ public class App extends Application {
         }
 
         Random rand = new Random();
-        int startY = rand.nextInt(500); // Randomly select a starting Y position for the rectangle
+        int startY = rand.nextInt(500); // Randomly select a starting Y position for the rectangle, starting point is at the top of the bar
         int endY = 500 - startY; // Ensure that the rectangle fits within the 500-pixel height of the scene
 
         Rectangle rectangle = new Rectangle(0, startY, 50, endY); // x, y, width, height
