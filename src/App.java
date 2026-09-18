@@ -91,7 +91,7 @@ public class App extends Application {
         List<Rectangle> rectangleList = new ArrayList<>();
 
         for (int i = 0; i < numberItems; i++) {
-            rectangleList.add(getRectangle());
+            rectangleList.add(getRectangle(i));
         }
         return rectangleList;
     }
@@ -101,7 +101,7 @@ public class App extends Application {
         for (Rectangle changeColor: rectangle)
         {
             changeColor.setFill(Color.color(random.nextDouble(),random.nextDouble(),random.nextDouble()));
-            changeColor.setX(random.nextDouble(480));
+
 
             int startY = random.nextInt(500);
             changeColor.setY(startY);
@@ -112,20 +112,20 @@ public class App extends Application {
 
     // IntelliJ auto into a private static func
     //creates the rectangle object
-    private static Rectangle getRectangle() {
+    private static Rectangle getRectangle(int i) {
 
         int startY = random.nextInt(500); // Randomly select a starting Y position for the rectangle, starting point is at the top of the bar
         int endY = 500 - startY; // Ensure that the rectangle fits within the 500-pixel height of the scene
 
-        int x = random.nextInt(480); // size 20 pixel wide, so the bound is 0 - (500-20) + 10
-
-        Rectangle rectangle = new Rectangle(x, startY, 20, endY);
+        int val = 40+ (i * 45);
+        Rectangle rectangle = new Rectangle(val, startY, 20, endY);
 
         // Code for coloring rectangle
         rectangle.setFill(Color.color(random.nextDouble(),random.nextDouble(),random.nextDouble()));       // Interior fill color
         rectangle.setStroke(Color.BLACK);      // Border color
         rectangle.setStrokeWidth(3);              // Border width in pixels
         return rectangle;
+
     }
 
 
