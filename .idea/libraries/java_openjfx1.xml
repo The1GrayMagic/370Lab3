@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java-openjfx1">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file:///lib/java-openjfx" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
